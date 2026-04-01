@@ -22,9 +22,7 @@ export default function RootLayout({
                 const theme =
                   storedTheme === "light" || storedTheme === "dark"
                     ? storedTheme
-                    : window.matchMedia("(prefers-color-scheme: dark)").matches
-                      ? "dark"
-                      : "light";
+                    : "dark";
                 document.documentElement.classList.toggle("dark", theme === "dark");
                 document.documentElement.dataset.theme = theme;
               })();

@@ -5,7 +5,7 @@ import { useState } from "react";
 export function ThemeToggle() {
   const [theme, setTheme] = useState<"light" | "dark">(() => {
     if (typeof document === "undefined") {
-      return "light";
+      return "dark";
     }
 
     return document.documentElement.classList.contains("dark")
